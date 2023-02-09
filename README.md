@@ -1,3 +1,3 @@
 # React Course
 
-The content is a part of my React Course. 
+The content is a part of the React Course. 
