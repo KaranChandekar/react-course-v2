@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 import './index.css';
 
-const Books = [
+const books = [
   {
     title: `Little Blue Truck's Valentine`,
     author: 'Alice Schertle',
@@ -16,13 +16,11 @@ const Books = [
   },
 ];
 
-const names = ['karan', 'john', 'jane'];
-
 const BookList = () => {
   return (
     <section className="booklist">
-      {names.map((name) => {
-        return <h1>{name}</h1>;
+      {books.map(({ img, title, author }) => {
+        return <Book img={img} title={title} author={author} />;
       })}
     </section>
   );
