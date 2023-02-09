@@ -41,14 +41,14 @@
 
 ```js
 function Greeting() {
-  return <h2>My First Component</h2>
+  return <h2>My First Component</h2>;
 }
 
 // arrow function also works
 
 const Greeting = () => {
-  return <h2>My First Component</h2>
-}
+  return <h2>My First Component</h2>;
+};
 ```
 
 - starts with capital letter
@@ -61,9 +61,9 @@ const Greeting = () => {
 // imports or logic
 
 const Greeting = () => {
-  return <h2>My First Component</h2>
-}
-export default Greeting
+  return <h2>My First Component</h2>;
+};
+export default Greeting;
 ```
 
 ##### Root Component (only one)
@@ -71,16 +71,16 @@ export default Greeting
 index.js
 
 ```js
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 function Greeting() {
-  return <h2>My First Component</h2>
+  return <h2>My First Component</h2>;
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<Greeting />)
+root.render(<Greeting />);
 ```
 
 #### Possible Bug
@@ -146,8 +146,8 @@ index.js
 
 ```js
 const Greeting = () => {
-  return React.createElement('h2', {}, 'hello world')
-}
+  return React.createElement('h2', {}, 'hello world');
+};
 ```
 
 ```js
@@ -156,7 +156,7 @@ function Greeting() {
     <div>
       <h2>hello world</h2>
     </div>
-  )
+  );
 }
 
 const Greeting = () => {
@@ -164,8 +164,8 @@ const Greeting = () => {
     'div',
     {},
     React.createElement('h2', {}, 'hello world')
-  )
-}
+  );
+};
 ```
 
 #### JSX Rules
@@ -176,11 +176,11 @@ const Greeting = () => {
   - Fragment - let's us group elements without adding extra nodes
 
 ```js
-return <React.Fragment>...rest of the return</React.Fragment>
+return <React.Fragment>...rest of the return</React.Fragment>;
 
 // shorthand
 
-return <>...rest of the return</>
+return <>...rest of the return</>;
 ```
 
 - camelCase property naming convention
@@ -204,15 +204,15 @@ return (
 - className instead of class
 
 ```js
-return <div className="someValue">hello</div>
+return <div className="someValue">hello</div>;
 ```
 
 - close every element
 
 ```js
-return <img />
+return <img />;
 // or
-return <input />
+return <input />;
 ```
 
 - formatting
@@ -233,7 +233,7 @@ function Greeting() {
       <h2>hello world</h2>
       <input type="text" name="" id="" />
     </>
-  )
+  );
 }
 ```
 
@@ -246,13 +246,13 @@ function Greeting() {
       <Person />
       <Message />
     </div>
-  )
+  );
 }
 
-const Person = () => <h2>john doe</h2>
+const Person = () => <h2>john doe</h2>;
 const Message = () => {
-  return <p>this is my message</p>
-}
+  return <p>this is my message</p>;
+};
 ```
 
 #### React Developer Tools
@@ -266,8 +266,8 @@ const Message = () => {
 - setup structure
 
 ```js
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 function BookList() {
   return (
@@ -277,7 +277,7 @@ function BookList() {
       <Book />
       <Book />
     </section>
-  )
+  );
 }
 
 const Book = () => {
@@ -287,18 +287,18 @@ const Book = () => {
       <Title />
       <Author />
     </article>
-  )
-}
+  );
+};
 
-const Image = () => <h2>image placeholder</h2>
+const Image = () => <h2>image placeholder</h2>;
 const Title = () => {
-  return <h2>Book Title</h2>
-}
-const Author = () => <h4>Author</h4>
+  return <h2>Book Title</h2>;
+};
+const Author = () => <h4>Author</h4>;
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<BookList />)
+root.render(<BookList />);
 ```
 
 - in search engine type - 'amazon best selling books'
@@ -309,8 +309,8 @@ root.render(<BookList />)
 - copy image, title and author
 
 ```js
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
 function BookList() {
   return (
@@ -320,7 +320,7 @@ function BookList() {
       <Book />
       <Book />
     </section>
-  )
+  );
 }
 
 const Book = () => {
@@ -330,23 +330,23 @@ const Book = () => {
       <Title />
       <Author />
     </article>
-  )
-}
+  );
+};
 
 const Image = () => (
   <img
     src="https://images-na.ssl-images-amazon.com/images/I/71m+Qtq+HrL._AC_UL900_SR900,600_.jpg"
     alt="Interesting Facts For Curious Minds"
   />
-)
+);
 const Title = () => {
-  return <h2>Interesting Facts For Curious Minds</h2>
-}
-const Author = () => <h4>Jordan Moore </h4>
+  return <h2>Interesting Facts For Curious Minds</h2>;
+};
+const Author = () => <h4>Jordan Moore </h4>;
 
-const root = ReactDOM.createRoot(document.getElementById('root'))
+const root = ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<BookList />)
+root.render(<BookList />);
 ```
 
 #### CSS
@@ -371,7 +371,7 @@ body {
 - import file and add classes
 
 ```js
-import './index.css'
+import './index.css';
 
 function BookList() {
   return (
@@ -381,7 +381,7 @@ function BookList() {
       <Book />
       <Book />
     </section>
-  )
+  );
 }
 
 const Book = () => {
@@ -391,8 +391,8 @@ const Book = () => {
       <Title />
       <Author />
     </article>
-  )
-}
+  );
+};
 ```
 
 - complete css
@@ -446,7 +446,7 @@ const Book = () => {
 ```js
 const Image = () => (
   <img src="./images/book-1.jpg" alt="Interesting Facts For Curious Minds" />
-)
+);
 ```
 
 - whatever assets we place in public - instantly available
@@ -463,7 +463,7 @@ const Author = () => (
   <h4 style={{ color: '#617d98', fontSize: '0.75rem', marginTop: '0.5rem' }}>
     Jordan Moore
   </h4>
-)
+);
 ```
 
 - css rules still apply (inline vs external css)
@@ -489,9 +489,9 @@ const Author = () => {
     color: '#617d98',
     fontSize: '0.75rem',
     marginTop: '0.5rem',
-  }
-  return <h4 style={inlineHeadingStyles}>Jordan Moore </h4>
-}
+  };
+  return <h4 style={inlineHeadingStyles}>Jordan Moore </h4>;
+};
 ```
 
 - FOR THE MOST PART, MULTIPLE APPROACHES AVAILABLE !!!
@@ -513,8 +513,8 @@ const Book = () => {
       <h2>Interesting Facts For Curious Minds</h2>
       <h4>Jordan Moore </h4>
     </article>
-  )
-}
+  );
+};
 ```
 
 ```css
@@ -531,9 +531,9 @@ const Book = () => {
   can't be a statement
 
 ```js
-const author = 'Jordan Moore'
+const author = 'Jordan Moore';
 const Book = () => {
-  const title = 'Interesting Facts For Curious Mindssssss'
+  const title = 'Interesting Facts For Curious Mindssssss';
   return (
     <article className="book">
       <img
@@ -546,8 +546,109 @@ const Book = () => {
       {/* <p>{let x = 6}</p> */}
       <p>{6 + 6}</p>
     </article>
-  )
-}
+  );
+};
 ```
 
 - toggle line comment Edit/Toggle Line Comment
+
+#### Props - Initial Setup
+
+- refactor/clean up
+
+```js
+const author = 'Jordan Moore';
+const title = 'Interesting Facts For Curious Minds';
+const img = './images/book-1.jpg';
+
+function BookList() {
+  return (
+    <section className="booklist">
+      <Book />
+      <Book />
+    </section>
+  );
+}
+const Book = () => {
+  return (
+    <article className="book">
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+      <h4>{author} </h4>
+    </article>
+  );
+};
+```
+
+```js
+// parameters
+const someFunc = (param1, param2) => {
+  console.log(param1, param2);
+};
+// arguments
+someFunc('job', 'developer');
+```
+
+```js
+const Book = (props) => {
+  console.log(props);
+  return (
+    <article className="book">
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+      <h4>{author} </h4>
+      {console.log(props)}
+    </article>
+  );
+};
+```
+
+- props object, convention to call props, 'shakeAndBake' is an excellent alternative
+
+- pass as key/value pairs
+- if the prop exists it will return value, otherwise no value
+
+```js
+function BookList() {
+  return (
+    <section className="booklist">
+      <Book job="developer" />
+      <Book title="random title" number={22} />
+    </section>
+  );
+}
+const Book = (props) => {
+  console.log(props);
+  return (
+    <article className="book">
+      <img src={img} alt={title} />
+      <h2>{title}</h2>
+      <h4>{author} </h4>
+      <p>{props.job}</p>
+      <p>{props.title}</p>
+      <p>{props.number}</p>
+    </article>
+  );
+};
+```
+
+```js
+function BookList() {
+  return (
+    <section className="booklist">
+      <Book author={author} title={title} img={img} />
+      <Book title={title} img={img} />
+    </section>
+  );
+}
+const Book = (props) => {
+  console.log(props);
+  return (
+    <article className="book">
+      <img src={props.img} alt={props.title} />
+      <h2>{props.title}</h2>
+      <h4>{props.author} </h4>
+    </article>
+  );
+};
+```
