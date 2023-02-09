@@ -27,8 +27,6 @@
 - README
   The markdown file where you can share more info about the project for example build instructions and summary
 
-- zoom 175%
-
 #### Remove Boilerplate
 
 - remove src folder
