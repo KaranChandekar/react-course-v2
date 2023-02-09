@@ -27,10 +27,7 @@ const Book = () => {
 }
 
 const Image = () => (
-  <img
-    src="https://images-na.ssl-images-amazon.com/images/I/817-Vrzp+tL._AC_UL600_SR600,400_.jpg"
-    alt=""
-  />
+  <img src="./images/book-1.jpg" alt="Little Blue Truck's Valentine" />
 )
 const Title = () => <h2>Little Blue Truck's Valentine</h2>
 const Author = () => <h4>Alice Schertle</h4>
