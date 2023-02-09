@@ -3,35 +3,27 @@ import ReactDOM from 'react-dom/client';
 
 import './index.css';
 
-const firstBook = {
-  title: `Little Blue Truck's Valentine`,
-  author: 'Alice Schertle',
-  img: './images/book-1.jpg',
-};
-const secondBook = {
-  title: `Atomic Habits`,
-  author: 'James Clea',
-  img: 'https://m.media-amazon.com/images/I/51B7kuFwQFL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg',
-};
+const Books = [
+  {
+    title: `Little Blue Truck's Valentine`,
+    author: 'Alice Schertle',
+    img: './images/book-1.jpg',
+  },
+  {
+    title: `Atomic Habits`,
+    author: 'James Clea',
+    img: 'https://m.media-amazon.com/images/I/51B7kuFwQFL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg',
+  },
+];
+
+const names = ['karan', 'john', 'jane'];
 
 const BookList = () => {
   return (
     <section className="booklist">
-      <Book
-        author={firstBook.author}
-        title={firstBook.title}
-        img={firstBook.img}
-      >
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, qui.
-        </p>
-        <button>click me</button>
-      </Book>
-      <Book
-        author={secondBook.author}
-        title={secondBook.title}
-        img={secondBook.img}
-      />
+      {names.map((name) => {
+        return <h1>{name}</h1>;
+      })}
     </section>
   );
 };
