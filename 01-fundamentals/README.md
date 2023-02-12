@@ -1588,11 +1588,11 @@ function BookList() {
       <h1>amazon best sellers</h1>
       <section className="booklist">
         {books.map((book) => {
-          return <Book {...book} key={book.id} />
+          return <Book {...book} key={book.id} />;
         })}
       </section>
     </>
-  )
+  );
 }
 ```
 
@@ -1611,3 +1611,16 @@ public/index.html
 ```html
 <title>Best Sellers</title>
 ```
+
+#### Build Production Application
+
+- stop the dev server "ctrl + c"
+- run "npm run build"
+- build folder gets created
+
+#### Netlify
+
+- sign up
+- add new site/deploy manually
+- choose build folder
+- rename site - site settings/change site name
