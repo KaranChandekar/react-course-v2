@@ -1,14 +1,24 @@
+import img1 from './images/book-1.jpg';
+import img2 from './images/book-2.jpg';
+import img3 from './images/book-3.jpg';
+
 export const books = [
   {
     id: 1,
-    title: `Little Blue Truck's Valentine`,
-    author: 'Alice Schertle',
-    img: './images/book-1.jpg',
+    title: 'It Ends with Us: A Novel',
+    author: 'Colleen Hoove',
+    img: img1,
   },
   {
     id: 2,
+    title: 'Spare',
+    author: 'Prince Harry The Duke of Sussex',
+    img: img2,
+  },
+  {
+    id: 3,
     title: `Atomic Habits`,
     author: 'James Clea',
-    img: 'https://m.media-amazon.com/images/I/51B7kuFwQFL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg',
+    img: img3,
   },
 ];
