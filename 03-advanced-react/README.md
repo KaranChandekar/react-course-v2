@@ -180,5 +180,3 @@ const UseStateArray = () => {
 
 export default UseStateArray;
 ```
-
-- should we update backroads app project?
