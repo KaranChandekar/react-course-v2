@@ -1,7 +1,9 @@
+import ErrorExample from './tutorial/01-useState/01-error-example';
+
 function App() {
   return (
-    <div className='container'>
-      <h2>advanced react</h2>
+    <div className="container">
+      <ErrorExample />
     </div>
   );
 }
