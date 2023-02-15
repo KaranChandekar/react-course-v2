@@ -48,3 +48,7 @@ The complete React 18 tutorial from basics to advance.
 - Initial Render and Re-Renders
 - General Rules of Hooks
 - useState with Array
+- useState with Object
+- Automatic Batching
+- Switch to Object
+- Set Function "Gotcha"
