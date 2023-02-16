@@ -1,9 +1,9 @@
-import MultipleEffects from './tutorial/02-useEffect/03-multiple-effects';
+import FetchData from './tutorial/02-useEffect/04-fetch-data';
 
 function App() {
   return (
     <div className="container">
-      <MultipleEffects />
+      <FetchData />
     </div>
   );
 }
