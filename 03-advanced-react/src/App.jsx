@@ -1,9 +1,9 @@
-import UseEffectBasics from './tutorial/02-useEffect/02-useEffect-basics';
+import MultipleEffects from './tutorial/02-useEffect/03-multiple-effects';
 
 function App() {
   return (
     <div className="container">
-      <UseEffectBasics />
+      <MultipleEffects />
     </div>
   );
 }
