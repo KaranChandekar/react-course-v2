@@ -785,3 +785,18 @@ console.log(randomList[0]); // returns undefined
 // not cool at all, javascript will scream, yell and complain
 console.log(randomList[0].name);
 ```
+
+#### Fetch Function Location
+
+```js
+const fetchData = async () => {
+  // fetch data
+};
+
+useEffect(() => {
+  fetchData();
+}, []);
+```
+
+- DON'T ADD fetchData to dependency array !!!
+- IT WILL TRIGGER INFINITE LOOP !!!
