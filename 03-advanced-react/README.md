@@ -562,7 +562,7 @@ const CleanupFunction = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <div>
-      <button className='btn' onClick={() => setToggle(!toggle)}>
+      <button className="btn" onClick={() => setToggle(!toggle)}>
         toggle component
       </button>
       {toggle && <RandomComponent />}
@@ -602,7 +602,7 @@ const CleanupFunction = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <div>
-      <button className='btn' onClick={() => setToggle(!toggle)}>
+      <button className="btn" onClick={() => setToggle(!toggle)}>
         toggle component
       </button>
       {toggle && <RandomComponent />}
@@ -634,6 +634,30 @@ useEffect(() => {
   return () => window.removeEventListener('scroll', someFunc);
 }, []);
 ```
+
+#### You Might Not Need an Effect
+
+[You Might Not Need an Effect](https://beta.reactjs.org/learn/you-might-not-need-an-effect)
+
+- will still utilize useEffect
+- there is still plenty of code using useEffect
+
+- fetching data
+  replaced by libraries - react query, rtk query, swr or next.js
+
+```js
+import { useHook } from 'library';
+
+function Example() {
+  const { data, error, isLoading } = useHook('url', fetcher);
+
+  if (error) return <div>failed to load</div>;
+  if (isLoading) return <div>loading...</div>;
+  return <div>hello {data.name}!</div>;
+}
+```
+
+- rest of them by refactoring code
 
 #### Multiple Returns - Basics
 
