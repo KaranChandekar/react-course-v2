@@ -1,9 +1,9 @@
-import CleanupFunction from './tutorial/02-useEffect/05-cleanup-function';
+import Navbar from './tutorial/04-project-structure/Navbar';
 
 function App() {
   return (
     <div className="container">
-      <CleanupFunction />
+      <Navbar />
     </div>
   );
 }
