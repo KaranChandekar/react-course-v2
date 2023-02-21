@@ -1,5 +1,6 @@
-import { people } from '../../../data';
+import { people } from '../../data';
 import Person from './Person';
+
 const List = () => {
   return (
     <div>
