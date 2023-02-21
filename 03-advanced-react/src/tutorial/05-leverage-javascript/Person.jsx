@@ -1,4 +1,5 @@
-import avatar from '../../../assets/default-avatar.svg';
+import avatar from '../../assets/default-avatar.svg';
+
 const Person = ({ name, nickName = 'shakeAndBake', images }) => {
   // before optional chaining
 
