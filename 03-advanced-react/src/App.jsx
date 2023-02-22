@@ -1,9 +1,9 @@
-import UncontrolledInputs from './tutorial/06-forms/05-form-data';
+import UseRefBasics from './tutorial/07-useRef/01-useRef-basics';
 
 function App() {
   return (
     <div className="container">
-      <UncontrolledInputs />
+      <UseRefBasics />
     </div>
   );
 }
