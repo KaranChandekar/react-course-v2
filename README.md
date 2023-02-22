@@ -52,3 +52,30 @@ The complete React 18 tutorial from basics to advance.
 - Automatic Batching
 - Switch to Object
 - Set Function "Gotcha"
+- Code Example
+- useEffect Basics
+- Multiple Effects
+- Fetch Data
+- Cleanup Function
+- You Might Not Need an Effect
+- Multiple Returns - Basics
+- Multiple Returns - Fetch Data
+- Fetch Errors "Gotcha" (optional)
+- Order Matters
+- Fetch Function Location
+- DON'T CALL HOOKS CONDITIONALLY
+- Truthy and Falsy Values (optional)
+- Short Circuit Evaluation React
+- Ternary Operator
+- Project Structure - Default Export
+- Project Structure - Named Exports
+- Project Structure - Export Group
+- Project Structure - Extra Extensions
+- Leverage Javascript
+- Default Values - Vanilla JS (Optional)
+- Optional Chaining - Vanilla JS (Optional)
+- Controlled Inputs
+- Multiple Inputs
+- Other Inputs
+- FormData API
+- useRef
