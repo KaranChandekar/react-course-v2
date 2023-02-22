@@ -1,20 +1,34 @@
 import { useState } from 'react';
+
 const frameworks = ['react', 'angular', 'vue', 'svelte'];
+
 const OtherInputs = () => {
+  const [shipping, setShipping] = useState(false);
+
+  const handleShipping = (e) => {
+    console.log(e.target.checked);
+  };
+
   return (
     <div>
-      <form className='form'>
+      <form className="form">
         <h4>Other Inputs</h4>
         {/* name */}
-        <div className='form-row' style={{ textAlign: 'left' }}>
-          <label htmlFor='shipping'> Free Shipping </label>
+        <div className="form-row" style={{ textAlign: 'left' }}>
+          <input
+            type="checkbox"
+            name="shipping"
+            id="shipping"
+            onChange={handleShipping}
+          />
+          <label htmlFor="shipping"> Free Shipping </label>
         </div>
-        <div className='form-row' style={{ textAlign: 'left' }}>
-          <label htmlFor='framework' className='form-label'>
+        <div className="form-row" style={{ textAlign: 'left' }}>
+          <label htmlFor="framework" className="form-label">
             Framework
           </label>
         </div>
-        <button type='submit' className='btn btn-block'>
+        <button type="submit" className="btn btn-block">
           submit
         </button>
       </form>
