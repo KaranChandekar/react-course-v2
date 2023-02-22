@@ -39,9 +39,7 @@ The complete React 18 tutorial from basics to advance.
 - Create-React-App Boilerplate (src)
 - Vite Info and Setup
 
-### 2 Backroads App
-
-### 3 React - Advanced Concepts
+### 2 React - Advanced Concepts
 
 - The Need For State
 - useState Basics
