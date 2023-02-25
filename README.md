@@ -77,3 +77,5 @@ The complete React 18 tutorial from basics to advance.
 - Other Inputs
 - FormData API
 - useRef
+- Custom Hooks
+- Context API
