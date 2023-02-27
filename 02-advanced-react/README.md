@@ -2069,7 +2069,7 @@ const Navbar = () => {
     setUser(null);
   };
   return (
-    <nav className='navbar'>
+    <nav className="navbar">
       <h5>CONTEXT API</h5>
       <NavLinks user={user} logout={logout} />
     </nav>
@@ -2085,13 +2085,13 @@ import UserContainer from './UserContainer';
 
 const NavLinks = ({ user, logout }) => {
   return (
-    <div className='nav-container'>
-      <ul className='nav-links'>
+    <div className="nav-container">
+      <ul className="nav-links">
         <li>
-          <a href='#'>home</a>
+          <a href="#">home</a>
         </li>
         <li>
-          <a href='#'>about</a>
+          <a href="#">about</a>
         </li>
       </ul>
       <UserContainer user={user} logout={logout} />
@@ -2106,11 +2106,11 @@ UserContainer.jsx
 ```js
 const UserContainer = ({ user, logout }) => {
   return (
-    <div className='user-container'>
+    <div className="user-container">
       {user ? (
         <>
           <p>Hello There, {user.name.toUpperCase()}</p>
-          <button type='button' className='btn' onClick={logout}>
+          <button type="button" className="btn" onClick={logout}>
             logout
           </button>
         </>
@@ -2147,3 +2147,82 @@ npm install && npm run dev
 - setup a custom hook
 - access in App.jsx
 - log result
+
+#### useReducer
+
+- it's the complete file from 03-useState-array
+
+Challenge
+
+- let's add reset functionality
+- create function that set's people back to data array
+- create another button, similar to clear just for reset
+- use conditional rendering to toggle between the buttons,
+  depending on people value
+
+```js
+const resetList = () => {
+  setPeople(data);
+};
+
+// JSX
+{
+  people.length < 1 ? (
+    <button className="btn" style={{ marginTop: '2rem' }} onClick={resetList}>
+      reset
+    </button>
+  ) : (
+    <button className="btn" style={{ marginTop: '2rem' }} onClick={clearList}>
+      clear
+    </button>
+  );
+}
+```
+
+```js
+import React from 'react';
+import { data } from '../../../data';
+const ReducerBasics = () => {
+  const [people, setPeople] = React.useState(data);
+
+  const removeItem = (id) => {
+    let newPeople = people.filter((person) => person.id !== id);
+    setPeople(newPeople);
+  };
+  const resetList = () => {
+    setPeople(data);
+  };
+  return (
+    <div>
+      {people.map((person) => {
+        const { id, name } = person;
+        return (
+          <div key={id} className="item">
+            <h4>{name}</h4>
+            <button onClick={() => removeItem(id)}>remove</button>
+          </div>
+        );
+      })}
+      {people.length < 1 ? (
+        <button
+          className="btn"
+          style={{ marginTop: '2rem' }}
+          onClick={resetList}
+        >
+          reset
+        </button>
+      ) : (
+        <button
+          className="btn"
+          style={{ marginTop: '2rem' }}
+          onClick={clearList}
+        >
+          clear
+        </button>
+      )}
+    </div>
+  );
+};
+
+export default ReducerBasics;
+```
